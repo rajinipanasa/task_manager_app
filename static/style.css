@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1E1E2E, #2A2A3C);
+    color: #EAEAEA;
+}
+
+/* CENTER ONLY LOGIN & REGISTER */
+.center-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CARD (LOGIN / REGISTER) */
+.card {
+    width: 320px;
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* INPUT */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+}
+
+/* PASSWORD BOX */
+.password-box {
+    position: relative;
+}
+
+.password-box span {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 15px;
+    background: #4A90E2;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #357ABD;
+}
+
+/* NAVBAR (NEW 🔥) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.profile a {
+    color: #EAEAEA;
+    text-decoration: none;
+    background: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+/* MAIN CONTAINER (DASHBOARD) */
+.main {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+/* FORM */
+.task-form {
+    margin: 20px 0;
+}
+
+.task-form input {
+    padding: 12px;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+}
+
+/* TASK LIST */
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+/* TASK CARD */
+.task-card {
+    width: 70%;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+}
+
+/* TASK TITLE */
+.task-card h3 {
+    margin: 0;
+}
+
+/* DATE (NEW 📅) */
+.date {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* STATUS */
+.status {
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.status.Todo {
+    background: gray;
+}
+
+.status.In\ Progress {
+    background: orange;
+}
+
+.status.Complete {
+    background: green;
+}
+
+/* BUTTONS */
+.actions {
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 3px;
+    color: white;
+    font-size: 12px;
+}
+
+.blue { background: #4A90E2; }
+.green { background: #2ecc71; }
+.orange { background: #f39c12; }
+.red { background: #e74c3c; }
+
+/* LOGOUT */
+.logout {
+    display: block;
+    margin: 30px;
+    color: #EAEAEA;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- 🔥 NAVBAR -->
+<div class="navbar">
+    <h2>Task Manager</h2>
+    <div class="profile">
+        👤 {{ user.username }}
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <!-- ADD TASK -->
+    <form action="/add" method="POST" class="task-form">
+        <input name="task" placeholder="✨ Add a new task..." required>
+        
+        <!-- 📅 DATE INPUT -->
+        <input type="date" name="due_date" required>
+
+        <button>Add</button>
+    </form>
+
+    <!-- TASK LIST -->
+    <div class="task-container">
+
+        {% for t in tasks %}
+        <div class="task-card">
+
+            <div class="task-info">
+                <h3>{{ t.task }}</h3>
+
+                <!-- 📅 SHOW DATE -->
+                <p class="date">📅 {{ t.due_date }}</p>
+
+                <span class="status {{ t.status }}">{{ t.status }}</span>
+            </div>
+
+            <div class="actions">
+                <a class="btn blue" href="/status/{{ t.id }}/In Progress">▶</a>
+                <a class="btn green" href="/status/{{ t.id }}/Complete">✔</a>
+                <a class="btn orange" href="/edit/{{ t.id }}">✏</a>
+                <a class="btn red" href="/delete/{{ t.id }}">🗑</a>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
